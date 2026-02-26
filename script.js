@@ -1,96 +1,130 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded",function(){
 
-// Typing Animation
 
-const text = ["Data Analyst","SQL Specialist","Power BI Developer"];
+/* typing animation */
 
-let count = 0;
-let index = 0;
-let currentText="";
-let letter="";
+const roles=[
+"Data Analyst",
+"SQL Specialist",
+"Power BI Developer",
+"Python Data Analyst"
+]
+
+let count=0
+let index=0
+let currentText=""
+let letter=""
 
 function type(){
 
-if(count === text.length){
-count=0;
+if(count===roles.length){
+count=0
 }
 
-currentText = text[count];
-letter = currentText.slice(0,++index);
+currentText=roles[count]
 
-document.getElementById("typing").textContent = letter;
+letter=currentText.slice(0,++index)
 
-if(letter.length === currentText.length){
-count++;
-index=0;
-setTimeout(type,1500);
-}else{
-setTimeout(type,80);
+document.getElementById("typing").textContent=letter
+
+if(letter.length===currentText.length){
+
+count++
+index=0
+
+setTimeout(type,1500)
+
+}
+
+else{
+
+setTimeout(type,80)
+
 }
 
 }
 
-type();
+type()
 
 
-// Dashboard Data
 
-const salesData = [
-{category:"Electronics", revenue:12000, orders:80},
-{category:"Clothing", revenue:8000, orders:120},
-{category:"Furniture", revenue:15000, orders:60}
-];
+/* counter animation */
 
-const revenueEl = document.getElementById("revenue");
-const ordersEl = document.getElementById("orders");
-const filterEl = document.getElementById("categoryFilter");
-const ctx = document.getElementById("dashboardChart");
+const counters=document.querySelectorAll(".counter")
 
-let chart;
+counters.forEach(counter=>{
 
-function updateDashboard(selected){
+counter.innerText="0"
 
-let filtered = salesData;
+const update=()=>{
 
-if(selected !== "All"){
-filtered = salesData.filter(d => d.category === selected);
+const target=+counter.getAttribute("data-target")
+const value=+counter.innerText
+
+const increment=target/50
+
+if(value<target){
+
+counter.innerText=Math.ceil(value+increment)
+
+setTimeout(update,30)
+
 }
 
-let revenue=0;
-let orders=0;
+else{
 
-filtered.forEach(item=>{
-revenue+=item.revenue;
-orders+=item.orders;
-});
+counter.innerText=target
 
-revenueEl.innerText="$"+revenue;
-ordersEl.innerText=orders;
-
-const labels = filtered.map(d=>d.category);
-const revenues = filtered.map(d=>d.revenue);
-
-if(chart){
-chart.destroy();
 }
 
-chart = new Chart(ctx,{
+}
+
+update()
+
+})
+
+
+
+/* project chart */
+
+const ctx=document.getElementById("projectChart")
+
+new Chart(ctx,{
+
 type:"bar",
+
 data:{
-labels:labels,
+
+labels:["Sales Analysis","Customer Segmentation","Financial Dashboard"],
+
 datasets:[{
-label:"Revenue",
-data:revenues
+
+label:"Project Impact",
+
+data:[85,70,90]
+
 }]
-}
-});
 
 }
 
-filterEl.addEventListener("change",function(){
-updateDashboard(this.value);
-});
+})
 
-updateDashboard("All");
 
-});
+
+/* particles background */
+
+particlesJS("particles-js",{
+
+particles:{
+
+number:{value:80},
+
+size:{value:3},
+
+move:{speed:1}
+
+}
+
+})
+
+})
