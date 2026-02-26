@@ -33,6 +33,31 @@ background:linear-gradient(135deg,#020617,#1e293b);
 font-size:45px;
 }
 
+.kpi-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:20px;
+margin-top:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:8px;
+text-align:center;
+}
+
+.card p{
+font-size:22px;
+color:#38bdf8;
+}
+
+.charts{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
 .btn{
 background:#38bdf8;
 color:black;
