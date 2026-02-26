@@ -8,16 +8,18 @@
 
 <title>Lucky Suthar | Data Analyst</title>
 
-<meta name="description" content="Lucky Suthar Data Analyst Portfolio - SQL, Python, Power BI dashboards">
-
 <link rel="stylesheet" href="style.css">
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
+<!-- particle background -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+
 </head>
 
-
 <body>
+
+<div id="particles-js"></div>
 
 
 <nav>
@@ -26,145 +28,118 @@
 
 <ul>
 
-<li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
-<li><a href="#dashboard">Dashboard</a></li>
+<li><a href="#stats">Stats</a></li>
 <li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
+<li><a href="#github">GitHub</a></li>
 
 </ul>
 
 </nav>
 
 
+
 <section class="hero">
 
-<h1>Hi I'm Lucky Suthar</h1>
+<h1>Lucky Suthar</h1>
 
 <h2><span id="typing"></span></h2>
 
-<p>Turning Data Into Business Insights Using SQL, Python & Power BI</p>
+<p>Data Analyst | SQL | Python | Power BI</p>
 
-<a class="btn" href="https://github.com/Luckysuthar17">View GitHub</a>
+<a class="btn" href="https://github.com/Luckysuthar17">
+View GitHub
+</a>
 
 </section>
+
+
+
+<section id="stats">
+
+<h2>Analytics Impact</h2>
+
+<div class="stats-grid">
+
+<div class="stat">
+
+<h3 class="counter" data-target="40">0</h3>
+<p>% Performance Improvement</p>
+
+</div>
+
+<div class="stat">
+
+<h3 class="counter" data-target="60">0</h3>
+<p>% Mobile Traffic Growth</p>
+
+</div>
+
+<div class="stat">
+
+<h3 class="counter" data-target="25">0</h3>
+<p>% Conversion Increase</p>
+
+</div>
+
+</div>
+
+</section>
+
 
 
 <section id="skills">
 
 <h2>Technical Skills</h2>
 
-<div class="skill">
+<div class="skills-grid">
 
-<p>SQL</p>
-<div class="skill-bar">
-<div class="skill-fill sql"></div>
-</div>
-
-<p>Power BI</p>
-<div class="skill-bar">
-<div class="skill-fill powerbi"></div>
-</div>
-
-<p>Python</p>
-<div class="skill-bar">
-<div class="skill-fill python"></div>
-</div>
-
-<p>Excel</p>
-<div class="skill-bar">
-<div class="skill-fill excel"></div>
-</div>
+<div class="card">SQL</div>
+<div class="card">Python</div>
+<div class="card">Power BI</div>
+<div class="card">Excel</div>
+<div class="card">Data Visualization</div>
+<div class="card">Statistics</div>
 
 </div>
 
 </section>
 
-
-<section id="dashboard">
-
-<h2>Interactive Sales Dashboard</h2>
-
-<select id="categoryFilter">
-
-<option>All</option>
-<option>Electronics</option>
-<option>Clothing</option>
-<option>Furniture</option>
-
-</select>
-
-<div class="kpi-grid">
-
-<div class="card">
-<h3>Total Revenue</h3>
-<p id="revenue">$0</p>
-</div>
-
-<div class="card">
-<h3>Total Orders</h3>
-<p id="orders">0</p>
-</div>
-
-</div>
-
-<canvas id="dashboardChart"></canvas>
-
-</section>
 
 
 <section id="projects">
 
-<h2>Featured Analytics Projects</h2>
+<h2>Featured Data Projects</h2>
 
-<div class="project-grid">
-
-
-<div class="project-card">
-
-<h3>Sales Analysis Dashboard</h3>
-
-<p>SQL + Python analysis identifying high revenue product categories.</p>
-
-<a href="https://github.com/Luckysuthar17">View Project</a>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>Customer Segmentation</h3>
-
-<p>Clustering customers based on purchasing behavior.</p>
-
-<a href="https://github.com/Luckysuthar17">View Project</a>
-
-</div>
-
-
-<div class="project-card">
-
-<h3>Financial KPI Dashboard</h3>
-
-<p>Business performance dashboard tracking revenue and profit metrics.</p>
-
-<a href="https://github.com/Luckysuthar17">View Project</a>
-
-</div>
-
-
-</div>
+<canvas id="projectChart"></canvas>
 
 </section>
+
+
+<section id="analysis">
+
+<h2>Real Dataset Analysis</h2>
+
+<canvas id="analysisChart"></canvas>
+
+<br>
+
+<a class="btn" href="dataset.csv" download>
+Download Dataset
+</a>
+
+</section>
+
 
 
 <section id="github">
 
 <h2>GitHub Activity</h2>
 
-<img src="https://ghchart.rshah.org/Luckysuthar17" alt="GitHub Contributions">
+<img src="https://ghchart.rshah.org/Luckysuthar17">
 
 </section>
+
 
 
 <section id="contact">
@@ -177,7 +152,7 @@
 
 
 <script src="script.js"></script>
+<script src="data-analysis.js"></script>
 
 </body>
-
 </html>
