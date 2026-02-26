@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html>
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Lucky Suthar | Data Analyst</title>
+
+<meta name="description" content="Lucky Suthar Data Analyst Portfolio - SQL, Python, Power BI dashboards">
 
 <link rel="stylesheet" href="style.css">
 
-<!-- Chart.js CDN -->
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 </head>
 
+
 <body>
 
+
 <nav>
+
 <h2>Lucky Suthar</h2>
+
 <ul>
+
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Skills</a></li>
+<li><a href="#dashboard">Dashboard</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
+
 </nav>
 
+
 <section class="hero">
-<h1>Hi, I'm Lucky Suthar</h1>
 
-<h2>
-<span id="typing"></span>
-</h2>
+<h1>Hi I'm Lucky Suthar</h1>
 
-<p>Transforming raw data into actionable business insights using SQL, Python & Power BI</p>
+<h2><span id="typing"></span></h2>
 
-<a href="#projects" class="btn">View My Work</a>
+<p>Turning Data Into Business Insights Using SQL, Python & Power BI</p>
+
+<a class="btn" href="https://github.com/Luckysuthar17">View GitHub</a>
 
 </section>
+
 
 <section id="skills">
 
@@ -66,50 +79,105 @@
 </div>
 
 </section>
-  
-<section class="kpi">
-<h2>Business KPI Dashboard</h2>
+
+
+<section id="dashboard">
+
+<h2>Interactive Sales Dashboard</h2>
+
+<select id="categoryFilter">
+
+<option>All</option>
+<option>Electronics</option>
+<option>Clothing</option>
+<option>Furniture</option>
+
+</select>
 
 <div class="kpi-grid">
+
 <div class="card">
-<h3>Total Sales</h3>
-<p>$25,000</p>
+<h3>Total Revenue</h3>
+<p id="revenue">$0</p>
 </div>
 
 <div class="card">
-<h3>Total Profit</h3>
-<p>$4,500</p>
+<h3>Total Orders</h3>
+<p id="orders">0</p>
 </div>
 
-<div class="card">
-<h3>Orders</h3>
-<p>320</p>
 </div>
 
-<div class="card">
-<h3>Profit Margin</h3>
-<p>18%</p>
+<canvas id="dashboardChart"></canvas>
+
+</section>
+
+
+<section id="projects">
+
+<h2>Featured Analytics Projects</h2>
+
+<div class="project-grid">
+
+
+<div class="project-card">
+
+<h3>Sales Analysis Dashboard</h3>
+
+<p>SQL + Python analysis identifying high revenue product categories.</p>
+
+<a href="https://github.com/Luckysuthar17">View Project</a>
+
 </div>
+
+
+<div class="project-card">
+
+<h3>Customer Segmentation</h3>
+
+<p>Clustering customers based on purchasing behavior.</p>
+
+<a href="https://github.com/Luckysuthar17">View Project</a>
+
+</div>
+
+
+<div class="project-card">
+
+<h3>Financial KPI Dashboard</h3>
+
+<p>Business performance dashboard tracking revenue and profit metrics.</p>
+
+<a href="https://github.com/Luckysuthar17">View Project</a>
+
+</div>
+
+
 </div>
 
 </section>
 
-<section id="analytics">
-<h2>Sales Analytics</h2>
 
-<div class="charts">
-<canvas id="salesChart"></canvas>
-<canvas id="profitChart"></canvas>
-</div>
+<section id="github">
+
+<h2>GitHub Activity</h2>
+
+<img src="https://ghchart.rshah.org/Luckysuthar17" alt="GitHub Contributions">
 
 </section>
+
 
 <section id="contact">
+
 <h2>Contact</h2>
+
 <p>Email: luckysuthar1712@gmail.com</p>
+
 </section>
+
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
